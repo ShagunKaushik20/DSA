@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertionSort</title>
+</head>
+<body>
+    <script>
+        function InsertionSort(arr){
+            var currentVal;
+            for(let i = 1;i<arr.length;i++){
+                currentVal = arr[i];
+                var j = i-1;
+                while(j>=0){
+                    if(arr[j] > currentVal){
+                        arr[j+1] = arr[j];
+                        j--;
+                    }
+                    else{
+                        break;
+                    }
+                    arr[j+1] = currentVal;
+                }
+            }
+            return arr;
+        }
+        console.log(InsertionSort([8,7,6,5,4]));
+    </script>
+    
+</body>
+</html>
